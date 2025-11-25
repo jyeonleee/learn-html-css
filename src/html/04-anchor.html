@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하이퍼링크 | Likelion Bootcamp</title>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <a href="#card-2">2번카드로 이동</a>
+    <hr />
+    <h1>하이퍼 링크</h1>
+
+    <h2>UI 실습</h2>
+    <!-- 나의실습 -->
+    <div class="card" id="card-1">
+      <img width="600" src="/src/assets/thumbnail/peaktime.jpeg" alt="" />
+      <p>
+        RESPONSIVE WEB <br />
+        DESIGN STRATEGIES
+      </p>
+      <p>반응형 웹디자인 전략</p>
+      <a href="https://bootcamp.likelion.net/school/kdt-frontend-17th" target="_blank" rel="noopener noreferrer">강의정보</a>
+    </div>
+    <!-- //나의실습 -->
+
+    <!-- 쌤 작업방법 -->
+    <div class="card" id="card-2">
+      <figure>
+        <img src="/src/assets/thumbnail/meeting-room.jpg" alt="" />
+        <figcaption>
+          <p>RESPONSIVE WEB<br />DESIGN STRATEGIES</p>
+          <p>반응형 웹디자인 전략</p>
+        </figcaption>
+        <a href="https://bootcamp.likelion.net/school/kdt-frontend-17th" target="_blank" rel="noopener noreferrer">강의정보</a>
+      </figure>
+    </div>
+    <!-- //쌤 작업방법 -->
+    <a href="#top">맨 위로</a>
+    <hr />
+
+    <h2>텍스트 링크</h2>
+    <p><a href="https://bootcamp.likelion.net/">멋쟁이 사자처럼</a> 프론트엔드 부트캠프 15기 시작!</p>
+    <p><a href="https://bootcamp.likelion.net/school/kdt-frontend-17th">멋쟁이 사자처럼 프론트엔드 부트캠프</a></p>
+    <!-- rel값은 target속성을 쓸때 필수로 사용하기를 권고, 보안을 위해서!!!! -->
+    <p><a href="https://github.com/" title="Github로 이동합니다." target="_blank" rel="noopener noreferrer">Github</a></p>
+    <p><a href="https://www.naver.com/" title="네이버로 이동합니다." target="likelion" rel="noopener noreferrer">네이버</a></p>
+    <p><a href="https://www.daum.net/" title="네이버로 이동합니다." target="likelion" rel="noopener noreferrer">다음</a></p>
+    <hr />
+
+    <h2>PDF 파일 링크</h2>
+    <p>
+      <a href="/src/assets/pdf/google-seo-guide-ko.pdf" download>구글 SEO 가이드</a>
+      <!-- download속성: 다운로드 되기를 원하면 download속성을 추가해 주면 된다 -->
+    </p>
+    <hr />
+    <h2>이메일 링크</h2>
+    <p><a href="mailto:jyeonleee@gmai.com?subject=문의사항">이주연 문의사항</a></p>
+    <!-- 실제 사이트에서 잘 사용하지 않음. 고객들의 컴플레인으로~! -->
+    <hr />
+    <h2>전화번호 링크</h2>
+    <p>고객센터 <a href="tel:01012341234">010-1234-1234</a></p>
+    <hr />
+    <h2>이미지 링크</h2>
+    <p>
+      <a href="/src/assets/cafew/brochure-@1x.png" download>
+        <img src="/src/assets/cafew/brochure-@1x.png" alt="cafeW 브로슈어" />
+      </a>
+    </p>
+    <hr />
+  </body>
+</html>
