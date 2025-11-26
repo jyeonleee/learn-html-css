@@ -24,6 +24,33 @@
     <hr />
     <h1>테이블 관련 요소</h1>
 
+    <!-- 웹접근성 작업을 위한, id값 header값 -->
+    <table>
+      <tr>
+        <th id="learn-time">학습시간</th>
+        <td headers="learn-time">09:00~17:00</td>
+      </tr>
+    </table>
+    <!-- 
+      테이블이 복잡해질때 접근성 문제를 해결하기 위해!
+        - 셀이 합쳐져 있을때(colspan, rowspan)
+        - 헤더가 여러개 일때
+        - 가로, 세로 구조가 섞여 있을때
+
+        <th id="learn-time">학습시간</th>
+        → 학습시간이라는 제목의 id = learn-time
+
+        <td headers="learn-time">09:00~17:00</td>
+        → 이 데이터는 learn-time(학습시간)과 연결된 데이터입니다!
+    -->
+
+    <!-- 
+      예시) <td headers="co1 c1">James Phillips</td> <td headers="co2 c1">Marie Beauchamp</td>
+        
+        headers="co1 c1" 두개의 제목에 동시에 연결되었다는뜻
+    -->
+
+    <hr />
     <table>
       <caption>
         <span>입문자를 위한 Git과 HTML&CSS 과정</span>
