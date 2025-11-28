@@ -27,5 +27,109 @@
       </fieldset>
     </form>
     <hr />
+
+    <form action="https://formspree.io/f/xeqwwbwk" method="post" id="inputForm">
+      <!-- action: 전송해서 전달할 서버의 주소 -->
+      <!-- action: 보내는 방법 (get 과 post 있음 / 개발 배우면서 상세히 배울예정) -->
+
+      <!-- 텍스트 입력 서식 -->
+      <div>
+        <label for="userID">이름</label>
+        <input type="text" id="userID" placeholder="예) 홍길동" name="name" />
+        <!-- 
+          - name="name" >> "name"은 값을 담아갈 그릇!! 
+          - 서버에 전송~ name이라는 키, 사용자가 입력한값 value
+          - 왼쪽name = 규칙(속성이름), 오른쪽name = 지정하는 실세 키값(서버에 보내질 이름)
+          - 실제 사용가 입력한 값이 서버에 담길 것 이다.
+         -->
+      </div>
+
+      <!-- 비밀번호 입력서식 -->
+      <div>
+        <label for="usePwd">비밀번호</label>
+        <input type="password" id="usePwd" placeholder="최소 8자 이상" name="pwd" pattern="^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$" />
+      </div>
+
+      <!-- 이메일 입력 서식 -->
+      <div>
+        <label for="userEmail">이메일</label>
+        <input type="email" id="userEmail" required placeholder="예) guest@Likelion.net" name="email" />
+      </div>
+
+      <!-- 전화번호 입력 서식 -->
+      <div>
+        <label for="userPhone">전화번호</label>
+        <input type="tel" id="userPhone" placeholder="예) 010-0000-0000" pattern="[0-9]{10}" />
+      </div>
+
+      <!-- url 입력 서식 -->
+      <div>
+        <label for="userSns">SNS</label>
+        <input type="url" id="userSns" placeholder="예) https://www.nave.com" />
+      </div>
+
+      <!--  검색어 입력 서식 -->
+      <div>
+        <label for="serach">검색어</label>
+        <input type="serach" id="serach" placeholder="검색어 예)멋쟁이 사자처럼" name="search" />
+      </div>
+
+      <!-- 라디오 입력 서식 -->
+      <div>
+        <input type="radio" id="male" name="gender" value="man" checked />
+        <label for="male">남자</label>
+        <input type="radio" id="female" name="gender" value="woman" />
+        <label for="female">여자</label>
+
+        <!-- 
+          name속성 > 서버로 키와 값을 보내는 것
+          "gender"가 key, value는 남자 또는 여자로 값이 전달. 사용자가 선택한 값으로 전달
+        -->
+      </div>
+
+      <!-- 체크박스 입력 서식 -->
+      <div>
+        <input type="checkbox" id="html" id="ck-1" value="마크업" name="frontend" />
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" id="ck-2" value="스타일" name="frontend" />
+        <label for="css">CSS</label>
+        <input type="checkbox" id="js" id="ck-3" value="기능" name="frontend" />
+        <label for="js">JS</label>
+      </div>
+
+      <!-- 파일 첨부 서식 -->
+      <div>
+        <input type="file" />
+      </div>
+
+      <!-- 전송 버튼 -->
+      <div>
+        <input type="submit" value="전송" />
+        <!-- <button type="submit">제출</button> -->
+        <!-- 버튼 택의 기본타입은 submit, 그래서 많이들 생략하는 편 -->
+      </div>
+
+      <!-- 초기화 버튼 -->
+      <input type="reset" value="초기화" />
+
+      <!-- 일반 버튼 -->
+      <input type="button" value="Click" />
+    </form>
+
+    <!-- 초기화 버튼 / form태그 밖에서 사용 할때 -->
+    <input form="inputForm" type="reset" value="초기화" />
+    <hr />
   </body>
 </html>
+
+<!-- 
+  - value: 접근 가능한 이름 > accessable name
+  - requried: 수입력 서식, required를 사용하고 입력값을 입력하지 않으면 submit시 제출되지 않는다
+  - name 속성: 같은 그룹으로 묶고, 서버로 보낼 때 key 역할을 함
+  
+  - calendar: 달력은 대한항공 사이트가 제일 접근성을 잘 지킴
+
+  - 참고 자료: https://html5forwebdesigners.com/forms/
+  - 참고 자료: https://regexr.com/ 
+  - 참고 데모 url: https://www.miketaylr.com/pres/html5/forms2.html
+-->
