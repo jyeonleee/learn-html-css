@@ -2,6 +2,54 @@
 body {
   color: green;
 }
+
 .wrapper {
+  color: blue;
+}
+
+.note {
   color: red;
 }
+
+/* 
+.like,
+.lion,
+.frontend,
+.bootcamp {
+  color: purple;
+} */
+
+#coding {
+  color: blue;
+}
+p.note {
+  color: purple;
+}
+
+/* 
+.a.b.c.d.e.f.g.h.j.k.l {
+  color: green !important;
+}
+*/
+
+body .wrapper p.note {
+  color: red;
+}
+body p.note.like {
+  color: purple;
+}
+
+.wrapper p {
+  color: skyblue !important;
+}
+/* 
+태그별 가지고 있는 점수
+  - 태그: 1점
+  - 클래스: 10점
+  - 아이디: 100점 
+
+  - ex) 
+  body p.note.like > 22점
+  풀이 > body:1점, p:1점, .note:10점, .like:10점
+
+*/
