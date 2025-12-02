@@ -87,12 +87,11 @@
     - aspect-ratio: 가로/세로; > 값이 자동으로 동일하게 맞쳐짐
 
   2. overflow: hidden
-    - 
+    - 영역을 제외한 텍스트는 잘린다
 
   3. oeverflow: scroll
     - 자동 스크롤 바 생김
 
-  4. 
-  3. oeverflow: scroll
-    - 자동 스크롤 바 생김
+  4. oeverflow: auto
+    - 자동 스크롤 바 생김(하단 스크롤바 제외)
 */
