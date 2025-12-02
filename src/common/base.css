@@ -1,1 +1,22 @@
 /* 기본 스타일 */
+/* css 에제 본문 스타일 */
+.css {
+  margin: 20px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  h1 {
+    margin-block: 20px;
+  }
+}
+
+/* 
+  - margin-block: 20px; 
+      >> top하고 bottom에게만 값 주고 싶을때
+  - margin-inline: 20px; 
+      >> left, right에게만 값 주고 싶을때
+ */
