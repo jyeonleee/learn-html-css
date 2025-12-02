@@ -1,0 +1,54 @@
+/* Position */
+
+/* position: relative; */
+.wrapper {
+  position: relative;
+  border: 1px solid blue;
+}
+.frontend {
+  background-color: #000;
+
+  span {
+    position: relative;
+    top: -5px;
+    left: 5px;
+    display: block;
+    padding: 10px;
+    background-color: #ffc;
+  }
+}
+
+/* position: absolute; */
+.school {
+  span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #cff;
+  }
+}
+
+/* position: fixed; */
+.likelion {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 50px;
+  background-color: #ffc;
+  font-weight: 700;
+  text-align: center; /* 가로 가운데 정렬 */
+  align-content: center; /* 세로 가운데 정렬 */
+}
+
+/* 
+  - position: absolute;을 사용하게 되면 inline태그이더라도~ block태그로 동작한다. 
+    예) span태그에 position값을 사용하면 block태그이 값을 갖게된다.
+
+  - position:absolute는 position:relative를 만날때까지 계속 찾는다.
+      >> position: static;이 아닐때까지 계속 부모를 찾는다.
+      >> absolute를 사용할때 공식처럼 relative를 찾지말고, static이 아닐때까지 계속 부모태그를 찾는다고 생각해야 한다.
+
+  - align-content: center;
+      >> 2022년에 display: flex에서만 쓸 수있는 align-content: center;을 단독으로 사용 가능하게 변경 되었다.
+*/
