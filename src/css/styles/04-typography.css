@@ -1,0 +1,93 @@
+/* 타이포그래피 및 단위 */
+/* 글꼴 */
+h1 {
+  font-family: 'SUIT Variable', sans-serif;
+}
+.like {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 굵기 */
+h1 {
+  font-weight: normal;
+}
+
+/* 크기 */
+.frontend {
+  font-size: 20px;
+}
+.lion {
+  background-color: #ffc;
+  /* font-size: 1.5em; */
+
+  /* clamp() 함수 */
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.bootcamp {
+  font-size: 2rem;
+}
+
+/* 줄높이 */
+.lion {
+  line-height: 1;
+}
+
+/* 글꼴 스타일 */
+em {
+  font-style: italic;
+}
+
+/* 크기가 작은 대문자 */
+.lion {
+  font-variant: small-caps;
+}
+
+/* font 단축 속성 */
+.school {
+  background: #fcf;
+  /* 
+  font고녈ㄴ 속성을 단축해서 선언할 때
+  font-weight: bold;
+  font-style: italic;
+  font-variant: small-caps;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+  */
+
+  font:
+    bold italic small-caps 20px/1.5 Georigia,
+    serif;
+}
+
+/* 글자 그림자 */
+h1 {
+  text-shadow: 5px -5px 2px red;
+}
+
+/* 
+1. 자주 사용하는 폰트패밀리
+  - 고딕계열: sans-serif
+  - 궁서체: serif 
+
+2. 지정하지 않았을때 기본 설정된 폰트사이즈
+  - font-size: 16px
+
+3. em
+  - 부모로 부터 상속받는 값을 기준으로 값이 지정됨, 부모의 값을 받음.
+  - 예) font-size: 1em 일때, 부모가 상속해준 값이 16px이라면 > 16 * 1 = 16px, 즉 1em은 16px
+  - 컴포넌트 사용시
+
+  4. rem
+    - 무조건 root를 기준으로 계산.
+
+  5. vw
+    - 텍스트를 유연하게 반응형으로 만들고 싶을대 사용
+    - clamp() 함수
+        ㄴ clamp(최소, 중간, 최대)
+    
+  6. line-height속성
+    - 줄의높이
+    - 사용자가 제일 편하게 느끼는 글자, 16px일때 line-heith: 1.6
+    - line-height는 최소 1.2로 주는게 좋은. 폰트에 따라 잘리수 있기 때문(ㅊ, ㅎ)
+*/
