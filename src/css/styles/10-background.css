@@ -1,0 +1,67 @@
+/* 색상 및 배경 - backgroun */
+
+/* color 속성 */
+.like {
+  color: red;
+  color: #f00;
+  color: rgba(255, 0, 0, 0.5);
+  color: rgb(255 0 0 / 0.5);
+  color: hsla(110, 50%, 20%, 0.5);
+}
+
+/* background-color 속성 */
+.wrapper {
+  background-color: blue;
+  padding: 5px;
+
+  .euid {
+    background-color: yellow;
+  }
+}
+
+/* background-image */
+/* background-repeat */
+/* background-position */
+/* background-size */
+.container {
+  border: 1px solid red;
+  margin-block: 20px;
+  /* background-size: contain;
+  background-image: url(/src/assets/images/rabbit.png), url(/src/assets/images/tree.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 70% 0; */
+  background:
+    url(/src/assets/images/cloud.png) no-repeat 70% 0 / 100px 50px,
+    url(/src/assets/images/tree.png) no-repeat 50% 0 / contain,
+    skyblue;
+  /* background: pink url(/src/assets/images/rabbit.png) no-repeat 50% 0 / contain; */
+}
+
+/* background-image: linear-gradinet() */
+.frontend {
+  border: 1px solid blue;
+  border-radius: 20px;
+  background-image: linear-gradient(red, green);
+}
+
+/* 
+  - 컬러지정 방법
+      예) color: red;
+
+  - 16진수 방법
+      예) color: #f00;
+
+  - rgba방식
+      >> - 컴마를 찍는방식은 레거시 방법. 최근에는 컴마를 찍지 않고, rgb방식으로 사용 가능함
+      예) color: rgb(255, 0, 0, 0.5);
+
+  - rgb방식
+      예) color: rgb(0 255 0 / 0.5);
+
+  - hsla방식
+      >> 인간이 구분할 수 있는 방식
+      예) color: rgb(0 255 0 / 0.5);
+
+  - backgorund 값을 줄때 이미지와 컬러를 같이 노출 할 수있나??
+      >> 이미지 url을 설정한후 마지막에 색을 지정필요
+*/
