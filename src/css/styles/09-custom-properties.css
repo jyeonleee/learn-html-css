@@ -1,0 +1,56 @@
+/* 사용자 정의 속성 */
+@property --primary-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgb(14, 118, 97);
+}
+
+/* 전역 변수 */
+:root {
+  --main-color: gray;
+  --default-color: pink;
+}
+
+body {
+  color: var(--primary-color);
+}
+
+.like {
+  background: var(--base-color, var(--default-color, red));
+}
+
+.wrapper {
+  /* 나랑 가장 가까운 값을 가져다씀 */
+  --default-color: yellow;
+  --primary-color: red;
+
+  color: var(--primary-color); /* 나랑 가장 가까운 값을 가져다씀 */
+  margin-block: 20px;
+  border: 1px solid var(--main-color);
+  background: var(--default-color);
+
+  .euid {
+    color: var(--primary-color);
+  }
+}
+
+/* 
+  - @property
+      >> @property = 그 변수의 ‘설명서 + 타입 + 초기값’을 정해주는 기능
+      >> 내가 만들수 있는 사용자 정의
+      >> CSS 변수에 '자료형·초기값·상속' 여부를 미리 정의해주는 규칙
+      >> syntax: '<color>' >> 이 변수는 색(Color)만 사용할 수 있습니다! 라고 선언
+      >> inherits: false >> false → 부모 요소의 값이 자식에게 자동 전달되지 않음 / true → 상속됨
+          ㄴ 기본 CSS 변수는 상속이 되는데 @property는 그걸 직접 제어할 수 있음.
+      >> initial-value: red >> 변수의 기본값을 미리 지정하는 것.
+
+  - fallback
+      >> 원래 값이 없거나 오류일 때 대신 사용되는 예비값(대체값), 원래 값이 없거나 오류일 때 대신 사용ehla
+      >> var(--base-color, silver); 여기서 , silver가 fallback
+
+  - 지역변수와 전역변수가 있을때! 지역변수가 우선하게 된다!
+  - inherits: false 라고 해도, 자식 요소에 var(--primary-color)를 직접 쓰면 '그 요소의 스코프에서 가장 가까운 값'을 다시 찾아서 사용한다.
+
+
+}
+*/
