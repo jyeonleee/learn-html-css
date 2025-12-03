@@ -42,7 +42,10 @@ body {
       >> syntax: '<color>' >> 이 변수는 색(Color)만 사용할 수 있습니다! 라고 선언
       >> inherits: false >> false → 부모 요소의 값이 자식에게 자동 전달되지 않음 / true → 상속됨
           ㄴ 기본 CSS 변수는 상속이 되는데 @property는 그걸 직접 제어할 수 있음.
+      >> inherits: false는 이 상속을 막는다.
+          ㄴ 즉,부모에서 선언한 변수값이 자식에게 자동으로 전달되지 않는다.
       >> initial-value: red >> 변수의 기본값을 미리 지정하는 것.
+
 
   - fallback
       >> 원래 값이 없거나 오류일 때 대신 사용되는 예비값(대체값), 원래 값이 없거나 오류일 때 대신 사용ehla
