@@ -1,1 +1,19 @@
 /* 접근성 관련 CSS */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: -1px;
+  padding: 0;
+  border-width: 0;
+  clip-path: inset(50%);
+}
+
+/* 
+  - .sr-only에 display: none을 주면 안됨! 왜냐 그럼 리더기에서 읽지 않음.
+      ㄴ 그 요소를 '존재하지 않는 것'으로 처리하기 때문
+  - position: absolute을 사용해서 top: -9999px(위치값)을 주게 되면! 
+    리더기가 숨김 텍스트를 읽을때스크린이 위로 튐. >> 저시력자가 스크린리더기 사용할 경우를 배려하지 못한 코드
+ */
