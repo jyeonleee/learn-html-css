@@ -1,0 +1,54 @@
+/* 논리속성과 논리값 - logical-properties */
+
+/* width, height */
+.like {
+  background: #ffc;
+  inline-size: 200px; /* width */
+  block-size: 100px; /* height */
+}
+
+/* margin, padding */
+.lion {
+  background: #ffc;
+  padding-block: 20px; /* padding 상하 같이 주기 */
+  margin-inline: 20px; /* margin 좌우 같이 주기 */
+}
+
+/* position: absolute; top, right, bottom, left */
+.bootcamp {
+  background: #cff;
+  position: relative;
+  inline-size: 300px;
+  block-size: 100px;
+
+  strong {
+    position: absolute;
+    background: #fcf;
+    /* inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    inset-block-end: 0; */
+    inset: 0; /* 0으로 주면 모든 값을 적용 */
+  }
+}
+
+.frontend {
+  background: #cff;
+
+  strong {
+    background: yellowgreen;
+    float: inline-end;
+  }
+}
+
+.euid {
+  padding: 10px;
+  background: salmon;
+  border-inline-start: 2px solid blue; /* border-bottom: 2px solid blue; */
+  border-block-end: 2px solid blue; /* border-bottom: 2px solid blue; */
+}
+
+/* 
+  - 논리속성을 써야하나??
+      >> 국제화시대! 해외에서도 사용하는 페이지라면 사용하는게 좋음!
+*/
