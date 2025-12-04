@@ -42,6 +42,27 @@
   }
 }
 
+/* 아바타 레이아웃 */
+.avatar-list {
+  width: 596px;
+  height: 395px;
+  padding: 110px 130px;
+  box-shadow: 0 0 4px 1px currentColor;
+
+  .avatar-item {
+    width: 64px;
+    height: 64px;
+    box-shadow: 0 0 0 1px currentColor;
+    float: left;
+    margin: 10px;
+
+    &:nth-child(5) {
+      background: yellow;
+      clear: left;
+    }
+  }
+}
+
 
 /* 
   - .avatar-state는 span태그로 인라인태그로 width,height값을 무시함. 그렇기에 block요소로 만들어줘야함.
@@ -50,4 +71,22 @@
   - box-sizing
       >> box-sizing: content-box >> content-box는 기본값 >> (w+p+b+m)
       >> box-sizing: border-box; >> (w(p+b)+m)
+  
+  - box-shadow
+      >> 박스크기에 영향을 주지 않는다
+  
+  - currentColor
+      >> 현재 글자 색깔!
+
+
+  - ***width의 기본값은 auto!** 부모의 값을 받는것이다!
+
+  - clear
+      >> float을 해제하는 기능! 독립 시킬 수 있음
+
+  - nth-child 참고 url
+      >> https://nthmaster.ru/
+
+  - nth-child() 선택자
+      >> odd > 짝수선택 / even > 홀수선택
 /*
