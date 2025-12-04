@@ -20,10 +20,6 @@
     height: 100%;
   }
 
-  /* .is-online {
-    background: var(--active-color) !important;
-  } */
-
   .avatar-state {
     width: calc(var(--state-size) / var(--avatar-size) * 100%);
     width: 16px;
@@ -50,14 +46,10 @@
   box-shadow: 0 0 4px 1px currentColor;
 
   .avatar-item {
-    width: 64px;
-    height: 64px;
-    box-shadow: 0 0 0 1px currentColor;
     float: left;
     margin: 10px;
 
     &:nth-child(5) {
-      background: yellow;
       clear: left;
     }
   }
