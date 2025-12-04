@@ -1,0 +1,41 @@
+/* css 미디어 쿼리 */
+
+/* 모든 디바이스 */
+body {
+  background: #ffc;
+}
+
+/* 모바일 디바이스 */
+/* (max-width: 400px) and (max-width: 1023px) */
+@media (640px <= width < 1024px) {
+  body {
+    background: #fcf;
+  }
+}
+
+/* 태블릿 디바이스 */
+@media (min-width: 400px) {
+  body {
+    background: #cfcf;
+  }
+}
+
+/* 데스크탑 디바이스 */
+@media (min-width: 1024px) {
+  body {
+    background: #ccf;
+  }
+}
+
+/* 
+  - 미디어쿼리 참고 url : https://developer.mozilla.org/ko/docs/Web/CSS/Reference/At-rules/@media
+
+  - 미디어쿼리 사용시!
+      > mobile first로 처리해야한다! 그래야 성능에 좋다. 
+      > 실무에서는 desktop first로 진행하는데 그렇게 하게되면 성능면에서 떨어진다.
+        ㄴ 실무에서 선호하는 이유 > 첫 작업시 반응형으로 작업하지 않고, desk먼저 고려해서 작업한 이후 추후에 모바일 용을 따로 만들어야하는 경우
+
+
+  - @media (max-width: 400px) > 최대 가로 크기가 400px 이하일때
+  - @media (min-width: 400px) > 최소 가로 크기가 400px 이상일때
+*/
