@@ -1,0 +1,74 @@
+/* 유틸리티 바 */
+
+.utility-bar-before {
+  --spacing: 8px;
+
+  font-size: 0.875rem;
+  display: flow-root;
+  text-transform: uppercase;
+  padding: calc(var(--spacing) / 2);
+
+  li {
+    float: inline-start;
+
+    /* &:nth-child(n + 2)::before {
+      content: '|';
+      float: left;
+      padding: 4px;
+    } */
+
+    /* &:first-child::before {
+      content: '';
+      padding: 0;
+    } */
+
+    li:nth-child(n + 2)::before {
+      content: '|';
+    }
+
+    li:nth-child(n + 2)::before,
+    a {
+      float: inline-start;
+      padding: calc(var(--spacing) / 2);
+    }
+  }
+}
+
+.utility-bar {
+  --spacing: 8px;
+
+  font-size: 0.875rem;
+  display: flow-root;
+  text-transform: uppercase;
+  padding: calc(var(--spacing) / 2);
+
+  li {
+    float: left;
+    display: flow-root;
+
+    span,
+    a {
+      float: inline-start;
+      padding: calc(var(--spacing) / 2);
+    }
+  }
+}
+
+/* me - flex를 사용 */
+/* .utility-bar {
+  display: flex;
+  gap: 8px;
+}
+.utility-bar span {
+  margin: 0 8px 0 0;
+} */
+
+/* me - flaot를 사용 */
+/* .utility-bar li {
+  float: left;
+  margin: 0 0 0 8px;
+
+  a {
+    margin: 0 0 0 8px;
+  }
+} */
