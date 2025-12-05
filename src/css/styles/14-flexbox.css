@@ -1,0 +1,118 @@
+/* Flex 레이아웃 */
+/* 영역 별 배경 색상 */
+div {
+  background: var(--yellow);
+
+  > div:nth-child(1) {
+    background: var(--pink);
+  }
+  > div:nth-child(2) {
+    background: var(--green);
+  }
+  > div:nth-child(3) {
+    background: var(--blue);
+  }
+  > div:nth-child(4) {
+    background: var(--orange);
+  }
+}
+
+/* Flex - flex-direction / order */
+.like {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: row;
+
+  div:nth-child(even) {
+    order: 1;
+  }
+}
+
+/* flex-wrap , flex-flow*/
+.lion {
+  display: flex;
+  /* flex-direction: row-reverse;
+  flex-wrap: wrap; */
+  flex-flow: wrap row-reverse;
+  padding: 0.5em;
+  inline-size: 600px;
+
+  > div {
+    inline-size: 150px;
+  }
+}
+
+/* justify-content, align-items */
+.euid {
+  block-size: 200px;
+  padding: 0.5em;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+/* align-contnet */
+.frontend {
+  display: flex;
+  inline-size: 400px;
+  block-size: 200px;
+  flex-flow: wrap row; /* flex-flow 줄바꿈 허용여부 */
+  justify-content: start;
+  align-items: stretch;
+  align-content: center;
+
+  > div {
+    inline-size: 200px;
+  }
+}
+
+/* gap */
+.bootcamp {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: start;
+  align-items: stretch;
+  inline-size: 400px;
+
+  column-gap: 20px;
+
+  > div {
+    inline-size: 190px;
+  }
+
+  .bootcamp-item1 {
+    align-self: center;
+  }
+}
+
+/* flex, flex-grow, flex-srhink, flex-basis */
+.school {
+  display: flex;
+  flex-flow: nowrap row;
+  inline-size: 200px;
+
+  > div {
+    /* flex: 1 1 0; */
+    flex-grow: 1;
+    flex-shrink: 1; /* 축소모델 */
+    flex-basis: 0;
+    /* flex-basis: auto; */
+
+    /* inline-size: 600px;
+    width값과 flex-basis를 같이 사요하면 flex-basis가 우선순위가 됨! */
+  }
+}
+/* .school {
+  display: flex;
+  flex-flow: nowrap row;
+  inline-size: 600px;
+
+  > div {
+    inline-size: 200px;
+    flex: 1 0 0;
+  }
+} */
+/* flex-grow: 1; */
+/*flex-basis: 0;*/
+/* 기준값. 기준값을 안주면 auto로 들어감. 오차가 날수있음 */
